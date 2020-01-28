@@ -103,7 +103,6 @@
                                     res.data.forEach(com => {
                                         this.towns.push(com)
                                     })
-                                    console.log(this.towns.length)
                                 }
                                 else this.alert('Veuillez n\'utiliser qu\'uniquement des chiffres ou uniquement des lettres ! ')
 
