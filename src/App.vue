@@ -1,16 +1,42 @@
 <template>
   <div id="app">
-    <div id="nav">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
-    </div>
-    <router-view/>
+    <ion-tabs>
+      <ion-tab tab="/">
+        <home/>
+      </ion-tab>
+=
+      <ion-tab tab="department">
+        <department/>
+      </ion-tab>
+
+      <ion-tab tab="region">
+        <region/>
+      </ion-tab>
+
+      <ion-tab-bar slot="bottom">
+        <ion-tab-button tab="/">
+          <ion-icon name="navigate"></ion-icon>
+          <ion-label>code postal</ion-label>
+
+        </ion-tab-button>
+        <ion-tab-button tab="department">
+          <ion-icon name="pin"></ion-icon>
+          <ion-label>départment</ion-label>
+
+        </ion-tab-button>
+        <ion-tab-button tab="region">
+          <ion-icon name="map"></ion-icon>
+          <ion-label>région</ion-label>
+        </ion-tab-button>
+      </ion-tab-bar>
+    </ion-tabs>
+
   </div>
 </template>
 
 <style lang="scss">
 #app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
+  font-family: 'Montserrat', Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
@@ -30,3 +56,16 @@
   }
 }
 </style>
+
+<script>
+  import home from '@/components/Home.vue'
+  import department from '@/components/department.vue'
+  import region from '@/components/region.vue'
+  export default {
+    components: {
+      home,
+      department,
+      region
+    }
+  }
+</script>
