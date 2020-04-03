@@ -22,7 +22,7 @@
                 </ion-button>
             </div>
 
-            <ion-card v-for="t in towns">
+            <ion-card v-for="t in towns" :key="t.code">
                 <ion-card-header>
                     <ion-card-title>{{t.nom}}</ion-card-title>
                     <ion-card-subtitle>{{t.code}}</ion-card-subtitle>
